@@ -1,4 +1,4 @@
-package com.maroti.page;
+package com.maroti.page.elements;
 
 import com.maroti.base.BaseClass;
 import org.openqa.selenium.WebDriver;
@@ -10,20 +10,23 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class LoginElements extends BaseClass {
-    protected WebDriver driver;
     @FindBy(xpath = "//div[@class='col-sm-12 h_container']/div[2]/div/a[1]")
     protected WebElement loginLink;
 
-    @FindBy(xpath = "//input[@id='7991592']")
+    @FindBy(xpath = "//input[@formcontrolname='userid']")
     protected WebElement username;
-    @FindBy(xpath = "//input[@id='3991352']")
+    @FindBy(xpath = "//input[@formcontrolname='password']")
     protected WebElement password;
 
     @FindBy(xpath = "//button[@type='submit']/parent::span")
     protected WebElement loginBtn;
 
-    LoginElements() throws URISyntaxException, IOException {
-        this.driver=initialize();
+    protected LoginElements() throws URISyntaxException, IOException {
+        initialize();
         PageFactory.initElements(driver, this);
+    }
+
+    public WebDriver getDriver(){
+        return driver;
     }
 }
