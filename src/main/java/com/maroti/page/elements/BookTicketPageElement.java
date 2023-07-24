@@ -12,15 +12,20 @@ import java.util.List;
 
 public class BookTicketPageElement extends BaseClass {
     @FindBy(xpath = "//p-autocomplete[@id='origin']//input")
+    protected WebElement clickFromCity;
+    @FindBy(xpath = "//p-autocomplete[@id='origin']//input")
     protected WebElement fromCity;
 
     @FindBy(xpath = "(//ul[@role='listbox']/li/span)[1]")
     protected WebElement selectFromCity;
     @FindBy(xpath = "//p-autocomplete[@id='destination']//input")
+    protected WebElement clickToCity;
+    @FindBy(xpath = "//p-autocomplete[@id='destination']//input")
     protected WebElement toCity;
-
     @FindBy(xpath = "(//ul[@role='listbox']/li/span)[1]")
     protected WebElement selectToCity;
+
+
 
     @FindBy(tagName = "//p-calendar/span/input")
     protected WebElement clickDate;
