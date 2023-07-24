@@ -25,9 +25,7 @@ public class BookTicketPageElement extends BaseClass {
     @FindBy(xpath = "(//ul[@role='listbox']/li/span)[1]")
     protected WebElement selectToCity;
 
-
-
-    @FindBy(tagName = "//p-calendar/span/input")
+    @FindBy(xpath = "//p-calendar/span/input")
     protected WebElement clickDate;
 
     @FindBy(xpath = "(//p-calendar/span//div)[3]/div/span[1]")
@@ -35,7 +33,7 @@ public class BookTicketPageElement extends BaseClass {
     @FindBy(xpath = "(//p-calendar/span//div)[3]/div/span[2]")
     protected WebElement selectYear;
 
-    @FindBy(xpath = "(//p-calendar/span//div)[5]//td/span")
+    @FindBy(xpath = "//p-calendar//td/a")
     protected List<WebElement> selectDay;
 
     @FindBy(xpath = "(//p-dropdown)[1]")

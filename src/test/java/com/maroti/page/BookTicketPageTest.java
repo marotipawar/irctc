@@ -21,7 +21,7 @@ public class BookTicketPageTest {
         Search search=Search.builder()
                 .from("ned")
                 .to("pune")
-                .date("25/July/2023")
+                .date("25/September/2023")
                 .coach("Sleeper")
                 .build();
         bookTicket.searchTrain(search);
